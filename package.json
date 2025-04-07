@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "@babel/preset-react": "^7.26.3",
     "@reduxjs/toolkit": "^2.5.1",
+    "@testing-library/jest-dom": "^6.6.3",
     "parcel": "^2.13.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

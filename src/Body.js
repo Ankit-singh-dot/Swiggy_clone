@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import RestaurentCard, { withPromotedLabel } from "./restaurentCard";
-import { useEffect, useState , useContext} from "react";
+import {   useContext} from "react";
 import Shimmer from "./shimmer_cards";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "./useonilneStatus";
-import RestaurentCard from "./restaurentCard";
+// import RestaurentCard from "./restaurentCard";
 import UserContext from "../utils/UserContext";
 const Body = () => {
   const [ListofRestaurent, setListofRestaurent] = useState([]);
