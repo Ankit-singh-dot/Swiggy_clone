@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const cardSlice = createSlice({
+const cardSlice = createSlice({ 
   name: "cart",
   initialState: {
     items: [],
   },
-  reducers: {
+  reducers:  {
     addItems: (state, action) => {
       state.items.push(action.payload);
     },
