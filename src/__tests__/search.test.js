@@ -8,7 +8,7 @@ global.fetch = jest.fn(() => {
   return Promise.resolve({
     json: () => {
       return Promise.resolve(MOCK_DATA);
-    },
+  },
   });
 });
 test("should work the feature of search bar ", async () => {

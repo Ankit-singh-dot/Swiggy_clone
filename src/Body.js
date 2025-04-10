@@ -41,7 +41,7 @@ const Body = () => {
       <div className="filter">
         <div className="search-box mt-2 mb-3 pl-3">
           <input
-          data-testid = "searchInput"
+            data-testid="searchInput"
             type="text"
             className="search-txt mb-4 mt-2 ml-4  border-2 border-l-pink-400-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400 transition-all hover:border-blue-500 hover:shadow-lg"
             placeholder="Type to Search"
@@ -51,6 +51,7 @@ const Body = () => {
             }}
           />
           <button
+            data-testid="TopRatedNext"
             className="px-4 py-1 ml-2 rounded-lg bg-yellow-200 "
             onClick={() => {
               const filterRestaurent = ListofRestaurent.filter((restaurent) =>
@@ -64,6 +65,7 @@ const Body = () => {
             search
           </button>
           <button
+            data-testid="TopRated"
             className="filter-btn  bg-slate-400 ml-9 rounded-md px-3 py-1"
             onClick={() => {
               const filteredList = filterRestaurants.filter(
@@ -75,12 +77,16 @@ const Body = () => {
             Top rated restaurant
           </button>
           <label className="ml-8">UserName :</label>
-          <input className="ml-2 border border-black rounded-md p-1" 
-          value={LoggedInUser}
-          onChange={(e)=>{setUserData(e.target.value )}}></input>
+          <input
+            className="ml-2 border border-black rounded-md p-1"
+            value={LoggedInUser}
+            onChange={(e) => {
+              setUserData(e.target.value);
+            }}
+          ></input>
         </div>
       </div>
- 
+
       <div className="flex flex-wrap ml-14">
         {filterRestaurants.map((restaurant) => (
           <Link

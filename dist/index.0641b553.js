@@ -18480,6 +18480,7 @@ const Body = ()=>{
                             }
                         }),
                         /*#__PURE__*/ (0, _jsxRuntime.jsx)("button", {
+                            "data-testid": "TopRatedNext",
                             className: "px-4 py-1 ml-2 rounded-lg bg-yellow-200 ",
                             onClick: ()=>{
                                 const filterRestaurent = ListofRestaurent.filter((restaurent)=>restaurent.card.card.info.name.toLowerCase().includes(searchText.toLowerCase()));
@@ -18488,6 +18489,7 @@ const Body = ()=>{
                             children: "search"
                         }),
                         /*#__PURE__*/ (0, _jsxRuntime.jsx)("button", {
+                            "data-testid": "TopRated",
                             className: "filter-btn  bg-slate-400 ml-9 rounded-md px-3 py-1",
                             onClick: ()=>{
                                 const filteredList = filterRestaurants.filter((restaurant)=>restaurant.card.card.info.avgRating > 4);
