@@ -1,0 +1,92 @@
+{
+    "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+    "info": {
+        "id": "905006",
+        "name": "Desi Dilli",
+        "city": "10459",
+        "slugs": {
+            "restaurant": "desi-dilli-greater-noida-greater-noida",
+            "city": "noida-1"
+        },
+        "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/6/7/91516aaa-de85-4328-8032-956a88396394_905006.JPG",
+        "address": "Shop No : 25 , Floor : 2 , BETA PLAZA, BETA 1, BITA-1, GautamBudh Nagar , ",
+        "locality": "SPARK DIVINE",
+        "areaName": "Greater Noida",
+        "costForTwo": "30000",
+        "costForTwoMessage": "₹300 FOR TWO",
+        "cuisines": [
+            "North Indian"
+        ],
+        "avgRating": 3.8,
+        "feeDetails": {},
+        "avgRatingString": "3.8",
+        "totalRatingsString": "17",
+        "promoted": true,
+        "adTrackingId": "cid=27531839~p=0~adgrpid=27531839#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=905006~plpr=SEARCH#RESTAURANT~st=north indian~eid=d6fea058-ceea-4f7f-a7f5-e6e23bf747be~srvts=1744156265043",
+        "sla": {
+            "deliveryTime": 32,
+            "minDeliveryTime": 30,
+            "maxDeliveryTime": 35,
+            "lastMileTravel": 2.5,
+            "serviceability": "SERVICEABLE",
+            "rainMode": "RAIN_MODE_NONE",
+            "slaString": "30-35 MINS",
+            "lastMileTravelString": "2.5 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseMessage": "Closes soon",
+            "opened": true,
+            "restaurantClosedMeta": {}
+        },
+        "badges": {},
+        "aggregatedDiscountInfoV3": {
+            "header": "15% OFF",
+            "subHeader": "UPTO ₹45",
+            "logoCtx": {
+                "text": "BENEFITS"
+            }
+        },
+        "ratingSlab": "RATING_SLAB_4",
+        "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {},
+            "commsStyling": {}
+        },
+        "cartOrderabilityNudgeBanner": {
+            "parameters": {},
+            "presentation": {}
+        },
+        "externalRatings": {
+            "aggregatedRating": {
+                "rating": "--"
+            }
+        },
+        "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+        "featuredSectionInfo": {
+            "sectionTitle": "More"
+        },
+        "campaignId": "27531839"
+    },
+    "analytics": {
+        "screenName": "explore",
+        "context": "{\"tid\":\"6691dc88-5cb4-e4e4-f8ac-1ac12b1214c5\",\"grid\":\"55c0a59b-550e-406a-9cce-9d5ff74c72b9\",\"queryUniqueId\":\"6eb9415e-8793-f2dc-6544-70e6001e4b96\",\"query\":\"North Indian\",\"adTrackingId\":\"cid=27531839~p=0~adgrpid=27531839#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=905006~plpr=SEARCH#RESTAURANT~st=north indian~eid=d6fea058-ceea-4f7f-a7f5-e6e23bf747be~srvts=1744156265043\"}",
+        "objectValue": "905006",
+        "impressionObjectName": "impression-restaurant-ad",
+        "clickObjectName": "click-restaurant-ad"
+    },
+    "ctaWithParams": {
+        "link": "swiggy://menu",
+        "type": "DEEPLINK",
+        "params": {
+            "restaurant_id": "905006",
+            "query": "North Indian",
+            "sourceSessionId": "jxh87cab-1f38-4d8c-b024-7fde8ef52d2e",
+            "source": "SEARCH",
+            "isSld": "false",
+            "sourceRequestId": "67f5b668d1706cdacf63dd05bf827fec"
+        }
+    }
+}

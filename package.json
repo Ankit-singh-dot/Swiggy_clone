@@ -25,7 +25,8 @@
     "tailwindcss": "^3.4.17"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "watch-test":"jest --watch"
   },
   "author": "",
   "license": "ISC",

@@ -2959,6 +2959,7 @@ var _UserContext = _interopRequireDefault(require("f4d19e96e0722f7"));
 var _reactRedux = require("1a5fcc9ced33ad07");
 var _appStore = _interopRequireDefault(require("60b8561b6da1e5aa"));
 var _cart = _interopRequireDefault(require("c71161c6b7f56e64"));
+var _header = _interopRequireDefault(require("7a65d0717c929759"));
 var _jsxRuntime = require("1efd84cd67f32d27");
 function _interopRequireDefault(e) {
     return e && e.__esModule ? e : {
@@ -2988,94 +2989,6 @@ function _interopRequireWildcard(e, r) {
     }
     return n.default = e, t && t.set(e, n), n;
 }
-const Header = ()=>{
-    const [btnNameReact, setBtnNameReact] = (0, _react.useState)("login");
-    const OnlineStatus = (0, _useonilneStatus.default)();
-    const { LoggedInUser } = (0, _react.useContext)(_UserContext.default);
-    console.log(LoggedInUser);
-    const cartItems = (0, _reactRedux.useSelector)((store)=>store.cart.items);
-    console.log(cartItems);
-    return /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
-        className: "flex justify-between bg-white shadow-md",
-        children: [
-            /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
-                className: "logo-container",
-                children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("img", {
-                    src: "https://as1.ftcdn.net/v2/jpg/02/36/29/56/1000_F_236295604_5cTJm2Ksy8F4l2iIo9QrCmc5O1tbs8yo.jpg",
-                    className: "logo size-28 rounded-xl shadow-md mt-1 ml-2 mb-1 shadow-gray-400 transition-transform duration-100 ease-in-out hover:scale-110 "
-                })
-            }),
-            /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
-                className: "flex items-center px-4 mt-4 ",
-                children: /*#__PURE__*/ (0, _jsxRuntime.jsxs)("ul", {
-                    className: "flex ",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxRuntime.jsx)("li", {
-                            className: "px-4",
-                            children: /*#__PURE__*/ (0, _jsxRuntime.jsx)(_reactRouterDom.Link, {
-                                to: "/",
-                                children: "Home"
-                            })
-                        }),
-                        /*#__PURE__*/ (0, _jsxRuntime.jsxs)("li", {
-                            className: "px-4",
-                            children: [
-                                "Online status :",
-                                OnlineStatus ? "\u2705" : "\uD83D\uDD34"
-                            ]
-                        }),
-                        /*#__PURE__*/ (0, _jsxRuntime.jsx)("li", {
-                            className: "px-4",
-                            children: /*#__PURE__*/ (0, _jsxRuntime.jsx)(_reactRouterDom.Link, {
-                                to: "/about",
-                                children: "About us"
-                            })
-                        }),
-                        /*#__PURE__*/ (0, _jsxRuntime.jsx)("li", {
-                            className: "px-4",
-                            children: /*#__PURE__*/ (0, _jsxRuntime.jsx)(_reactRouterDom.Link, {
-                                to: "/contact",
-                                children: "contact us"
-                            })
-                        }),
-                        /*#__PURE__*/ (0, _jsxRuntime.jsxs)("li", {
-                            className: "px-4 font-bold flex",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxRuntime.jsxs)(_reactRouterDom.Link, {
-                                    to: "/cart",
-                                    children: [
-                                        " Cart-(",
-                                        cartItems.length,
-                                        ")"
-                                    ]
-                                }),
-                                /*#__PURE__*/ (0, _jsxRuntime.jsx)("img", {
-                                    className: "size-8 my-0",
-                                    src: "https://t4.ftcdn.net/jpg/02/66/71/71/360_F_266717164_J8Fqw4OcXRkKtNwFyHD02zIEsxPI7qHH.jpg"
-                                })
-                            ]
-                        }),
-                        /*#__PURE__*/ (0, _jsxRuntime.jsx)("button", {
-                            className: "login mb-5",
-                            onClick: ()=>{
-                                setBtnNameReact((preview)=>preview === "login" ? "logout" : "login");
-                            },
-                            children: btnNameReact
-                        }),
-                        /*#__PURE__*/ (0, _jsxRuntime.jsxs)("li", {
-                            className: "font-bold",
-                            children: [
-                                ": ",
-                                LoggedInUser
-                            ]
-                        })
-                    ]
-                })
-            })
-        ]
-    });
-};
-_c = Header;
 const AppLayout = ()=>{
     const [userData, setUserData] = (0, _react.useState)();
     (0, _react.useEffect)(()=>{
@@ -3094,14 +3007,14 @@ const AppLayout = ()=>{
             children: /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
                 className: "App",
                 children: [
-                    /*#__PURE__*/ (0, _jsxRuntime.jsx)(Header, {}),
+                    /*#__PURE__*/ (0, _jsxRuntime.jsx)(_header.default, {}),
                     /*#__PURE__*/ (0, _jsxRuntime.jsx)(_reactRouterDom.Outlet, {})
                 ]
             })
         })
     });
 };
-_c1 = AppLayout;
+_c = AppLayout;
 const appRouter = (0, _reactRouterDom.createBrowserRouter)([
     {
         path: "/",
@@ -3135,16 +3048,15 @@ const root = _client.default.createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxRuntime.jsx)(_reactRouterDom.RouterProvider, {
     router: appRouter
 }));
-var _c, _c1;
-$RefreshReg$(_c, "Header");
-$RefreshReg$(_c1, "AppLayout");
+var _c;
+$RefreshReg$(_c, "AppLayout");
 
   $parcel$ReactRefreshHelpers$f79a.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","5df8ba2a41c8a9ec":"21dqq","ba81b44823fa3110":"lOjBx","8c1ba86d449eeb61":"5pK3b","86fb6e07723dcd01":"9xmpe","5eb7c926888111cf":"7xYvO","4b6b5d1686a37a68":"eTyhu","f2591f613504b7a9":"a6CPQ","8dc9515010700613":"6uiZu","7a268f90681bb882":"aY9qu","f4d19e96e0722f7":"7To3X","1a5fcc9ced33ad07":"62sf7","60b8561b6da1e5aa":"3In7a","c71161c6b7f56e64":"dgms5","1efd84cd67f32d27":"6AEwr"}],"km3Ru":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","5df8ba2a41c8a9ec":"21dqq","ba81b44823fa3110":"lOjBx","8c1ba86d449eeb61":"5pK3b","86fb6e07723dcd01":"9xmpe","5eb7c926888111cf":"7xYvO","4b6b5d1686a37a68":"eTyhu","f2591f613504b7a9":"a6CPQ","8dc9515010700613":"6uiZu","7a268f90681bb882":"aY9qu","f4d19e96e0722f7":"7To3X","1a5fcc9ced33ad07":"62sf7","60b8561b6da1e5aa":"3In7a","c71161c6b7f56e64":"dgms5","1efd84cd67f32d27":"6AEwr","7a65d0717c929759":"ef18b"}],"km3Ru":[function(require,module,exports,__globalThis) {
 "use strict";
 var Refresh = require("7422ead32dcc1e6b");
 var { version } = require("630b62916b1ae0e7");
@@ -18558,6 +18470,7 @@ const Body = ()=>{
                     className: "search-box mt-2 mb-3 pl-3",
                     children: [
                         /*#__PURE__*/ (0, _jsxRuntime.jsx)("input", {
+                            "data-testid": "searchInput",
                             type: "text",
                             className: "search-txt mb-4 mt-2 ml-4  border-2 border-l-pink-400-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400 transition-all hover:border-blue-500 hover:shadow-lg",
                             placeholder: "Type to Search",
@@ -18635,7 +18548,9 @@ exports.withPromotedLabel = exports.default = void 0;
 var _jsxRuntime = require("7ca1ebeac9f74aa3");
 const RestaurantCard = (props)=>{
     const { resData } = props;
+    // console.log(resData);
     return /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+        "data-testid": "resCard",
         className: "w-[300px] m-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 ease-in-out bg-white hover:-translate-y-1 overflow-hidden ",
         children: [
             /*#__PURE__*/ (0, _jsxRuntime.jsx)("img", {
@@ -18693,6 +18608,7 @@ _c = RestaurantCard;
 const withPromotedLabel = (RestaurantCard)=>{
     return (props)=>{
         return /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+            "data-testid": "resCard",
             className: "relative",
             children: [
                 /*#__PURE__*/ (0, _jsxRuntime.jsx)("label", {
@@ -30797,6 +30713,126 @@ $RefreshReg$(_c, "Cart");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"6b99fb45b73e6c70":"62sf7","a2f80bcd9d32b92e":"jqCye","8f72a848d8fb0d23":"1aTGn","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","22def286d42e352":"6AEwr"}]},["aQL8O","9w8YQ","bNKaB"], "bNKaB", "parcelRequire94c2")
+},{"6b99fb45b73e6c70":"62sf7","a2f80bcd9d32b92e":"jqCye","8f72a848d8fb0d23":"1aTGn","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","22def286d42e352":"6AEwr"}],"ef18b":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$499a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$499a.prelude(module);
+
+try {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _react = require("d6cba40d28ca686c");
+var _reactRedux = require("fadbb72b5e59a143");
+var _reactRouterDom = require("a80fbcbc3350da6a");
+var _useonilneStatus = _interopRequireDefault(require("cfd7e4593e7be3bb"));
+var _UserContext = _interopRequireDefault(require("77d8bbf8fdb8b9ff"));
+var _jsxRuntime = require("321c5fcc7908945c");
+function _interopRequireDefault(e) {
+    return e && e.__esModule ? e : {
+        default: e
+    };
+}
+const Header = ()=>{
+    const [btnNameReact, setBtnNameReact] = (0, _react.useState)("login");
+    const OnlineStatus = (0, _useonilneStatus.default)();
+    const { LoggedInUser } = (0, _react.useContext)(_UserContext.default);
+    console.log(LoggedInUser);
+    const cartItems = (0, _reactRedux.useSelector)((store)=>store.cart.items);
+    console.log(cartItems);
+    return /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+        className: "flex justify-between bg-white shadow-md",
+        children: [
+            /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
+                className: "logo-container",
+                children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("img", {
+                    src: "https://as1.ftcdn.net/v2/jpg/02/36/29/56/1000_F_236295604_5cTJm2Ksy8F4l2iIo9QrCmc5O1tbs8yo.jpg",
+                    className: "logo size-28 rounded-xl shadow-md mt-1 ml-2 mb-1 shadow-gray-400 transition-transform duration-100 ease-in-out hover:scale-110 "
+                })
+            }),
+            /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
+                className: "flex items-center px-4 mt-4 ",
+                children: /*#__PURE__*/ (0, _jsxRuntime.jsxs)("ul", {
+                    className: "flex ",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxRuntime.jsx)("li", {
+                            className: "px-4",
+                            children: /*#__PURE__*/ (0, _jsxRuntime.jsx)(_reactRouterDom.Link, {
+                                to: "/",
+                                children: "Home"
+                            })
+                        }),
+                        /*#__PURE__*/ (0, _jsxRuntime.jsxs)("li", {
+                            className: "px-4",
+                            children: [
+                                "Online status :",
+                                OnlineStatus ? "\u2705" : "\uD83D\uDD34"
+                            ]
+                        }),
+                        /*#__PURE__*/ (0, _jsxRuntime.jsx)("li", {
+                            className: "px-4",
+                            children: /*#__PURE__*/ (0, _jsxRuntime.jsx)(_reactRouterDom.Link, {
+                                to: "/about",
+                                children: "About us"
+                            })
+                        }),
+                        /*#__PURE__*/ (0, _jsxRuntime.jsx)("li", {
+                            className: "px-4",
+                            children: /*#__PURE__*/ (0, _jsxRuntime.jsx)(_reactRouterDom.Link, {
+                                to: "/contact",
+                                children: "contact us"
+                            })
+                        }),
+                        /*#__PURE__*/ (0, _jsxRuntime.jsxs)("li", {
+                            className: "px-4 font-bold flex",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxRuntime.jsxs)(_reactRouterDom.Link, {
+                                    to: "/cart",
+                                    children: [
+                                        " Cart-(",
+                                        cartItems.length,
+                                        ")"
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0, _jsxRuntime.jsx)("img", {
+                                    className: "size-8 my-0",
+                                    src: "https://t4.ftcdn.net/jpg/02/66/71/71/360_F_266717164_J8Fqw4OcXRkKtNwFyHD02zIEsxPI7qHH.jpg"
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ (0, _jsxRuntime.jsx)("button", {
+                            className: "login mb-5",
+                            onClick: ()=>{
+                                setBtnNameReact((preview)=>preview === "login" ? "logout" : "login");
+                            },
+                            children: btnNameReact
+                        }),
+                        /*#__PURE__*/ (0, _jsxRuntime.jsxs)("li", {
+                            className: "font-bold",
+                            children: [
+                                ": ",
+                                LoggedInUser
+                            ]
+                        })
+                    ]
+                })
+            })
+        ]
+    });
+};
+_c = Header;
+var _default = exports.default = Header;
+var _c;
+$RefreshReg$(_c, "Header");
+
+  $parcel$ReactRefreshHelpers$499a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"d6cba40d28ca686c":"21dqq","321c5fcc7908945c":"6AEwr","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","fadbb72b5e59a143":"62sf7","a80fbcbc3350da6a":"9xmpe","cfd7e4593e7be3bb":"aY9qu","77d8bbf8fdb8b9ff":"7To3X"}]},["aQL8O","9w8YQ","bNKaB"], "bNKaB", "parcelRequire94c2")
 
 //# sourceMappingURL=index.0641b553.js.map

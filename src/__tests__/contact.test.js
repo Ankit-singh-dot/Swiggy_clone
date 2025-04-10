@@ -11,6 +11,7 @@ test("should load 3 input boxes on the content components ", () => {
   render(<Contact />);
   const inputBoxes = screen.getAllByRole("textbox");
   expect(inputBoxes.length).toBe(3);
+  
 });
 })
 

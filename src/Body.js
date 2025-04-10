@@ -41,6 +41,7 @@ const Body = () => {
       <div className="filter">
         <div className="search-box mt-2 mb-3 pl-3">
           <input
+          data-testid = "searchInput"
             type="text"
             className="search-txt mb-4 mt-2 ml-4  border-2 border-l-pink-400-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400 transition-all hover:border-blue-500 hover:shadow-lg"
             placeholder="Type to Search"
@@ -79,7 +80,7 @@ const Body = () => {
           onChange={(e)=>{setUserData(e.target.value )}}></input>
         </div>
       </div>
-
+ 
       <div className="flex flex-wrap ml-14">
         {filterRestaurants.map((restaurant) => (
           <Link

@@ -1,8 +1,12 @@
 const RestaurantCard = (props) => {
   const { resData } = props;
+  // console.log(resData);
 
   return (
-    <div className="w-[300px] m-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 ease-in-out bg-white hover:-translate-y-1 overflow-hidden ">
+    <div
+      data-testid="resCard"
+      className="w-[300px] m-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 ease-in-out bg-white hover:-translate-y-1 overflow-hidden "
+    >
       <img
         className="w-full h-48 object-cover rounded-t-xl"
         src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/${resData.info.cloudinaryImageId}`}
@@ -36,16 +40,16 @@ const RestaurantCard = (props) => {
   );
 };
 
-export const withPromotedLabel = (RestaurantCard)=>{
-  return (props)=>{
+export const withPromotedLabel = (RestaurantCard) => {
+  return (props) => {
     return (
-      <div className="relative">
+      <div data-testid="resCard" className="relative">
         <label className="absolute top-2 left-2 bg-gray-800 text-white text-xs font-semibold px-2 py-1 rounded z-10">
           Promoted
         </label>
         <RestaurantCard {...props} />
       </div>
     );
-  }
-}
+  };
+};
 export default RestaurantCard;

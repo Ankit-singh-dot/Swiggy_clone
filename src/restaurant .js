@@ -41,7 +41,7 @@ const RestaurantMenu = () => {
   console.log(cards);
 
   return (
-    <div className=" text-center">
+    <div  className=" text-center">
       <div>
         <h1 className="font-bold my-6 text-2xl">{name}</h1>
 
